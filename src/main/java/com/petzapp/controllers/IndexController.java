@@ -24,8 +24,3 @@ public class IndexController {
 	
 	
 }
-package com.eventoapp.controllers;
-
-public class IndexController {
-
-}
