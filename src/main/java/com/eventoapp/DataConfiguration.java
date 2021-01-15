@@ -17,9 +17,9 @@ public class DataConfiguration {
 		
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/eventosapp");
-		dataSource.setUsername("root");
-		dataSource.setPassword("leandroM");
+		dataSource.setUrl("jdbc:mysql://leandroserverdb.mysql.database.azure.com:3306/petzapp");
+		dataSource.setUsername("leandro@leandroserverdb");
+		dataSource.setPassword("@Meireles");
 		return dataSource;
 		
 	}
@@ -31,7 +31,7 @@ public class DataConfiguration {
 		adapter.setDatabase(Database.MYSQL);
 		adapter.setShowSql(true);
 		adapter.setGenerateDdl(true);
-		adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect");
+		adapter.setDatabasePlatform("org.hibernate.dialect.MySQL55Dialect");
 		adapter.setPrepareConnection(true);
 		return adapter;
 	}
