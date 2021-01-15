@@ -1,4 +1,4 @@
-package com.eventoapp;
+package com.petzapp.data;
 
 import javax.sql.DataSource;
 

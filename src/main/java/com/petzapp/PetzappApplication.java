@@ -1,4 +1,4 @@
-package com.eventoapp;
+package com.petzapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

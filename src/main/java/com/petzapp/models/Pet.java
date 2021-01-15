@@ -1,4 +1,4 @@
-package com.eventoapp.models;
+package com.petzapp.models;
 
 import java.io.Serializable;
 
