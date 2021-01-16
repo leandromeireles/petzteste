@@ -18,6 +18,8 @@ public class Cliente implements Serializable {
 	private long codigo;
 
 	private String nome;
+	
+	private long idPet;
 
 	public long getCodigo() {
 		return codigo;
@@ -33,6 +35,14 @@ public class Cliente implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public long getIdPet() {
+		return idPet;
+	}
+
+	public void setIdPet(long idPet) {
+		this.idPet = idPet;
 	}
 
 }
