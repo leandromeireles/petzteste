@@ -33,7 +33,7 @@ public class SwaggerConfig {
 
         ApiInfo apiInfo = new ApiInfo(
                 "Clientes API REST",
-                "API REST de cadastro de clientes.",
+                "API REST de cadastro Petz.",
                 "1.0",
                 "Terms of Service",
                 new Contact("Leandro Meireles", "",

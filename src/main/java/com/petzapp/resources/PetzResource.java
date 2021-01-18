@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.petzapp.models.Cliente;
-import com.petzapp.repository.PetzRepository;
+import com.petzapp.models.Pet;
+import com.petzapp.repository.ClienteRepository;
+import com.petzapp.repository.PetRepository;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -26,13 +28,16 @@ import io.swagger.annotations.ApiOperation;
 public class PetzResource {
 
 	@Autowired
-	PetzRepository petzRepository;
+	ClienteRepository clienteRepository;
+	
+	@Autowired
+	PetRepository petRepository;
 
 	@GetMapping("/clientes")
 	@ApiOperation(value="Retorna Lista de Clientes")
 	public List<Cliente> listaClientes() {
 
-		return petzRepository.findAll();
+		return clienteRepository.findAll();
 
 	}
 
@@ -40,7 +45,7 @@ public class PetzResource {
 	@ApiOperation(value="Retorna Clientes Unico")
 	public Cliente listaClienteUnico(@PathVariable(value = "codigo") long codigo) {
 
-		return petzRepository.findById(codigo);
+		return clienteRepository.findById(codigo);
 
 	}
 
@@ -48,7 +53,7 @@ public class PetzResource {
 	@ApiOperation(value="Salva um Cliente")
 	public Cliente salvaCliente(@RequestBody Cliente cliente) {
 
-		return petzRepository.save(cliente);
+		return clienteRepository.save(cliente);
 
 	}
 	
@@ -56,7 +61,7 @@ public class PetzResource {
 	@ApiOperation(value="Deleta um Cliente")
 	public void deletaCliente(@RequestBody Cliente cliente) {
 
-		petzRepository.delete(cliente);
+		clienteRepository.delete(cliente);
 
 	}
 	
@@ -64,7 +69,47 @@ public class PetzResource {
 	@ApiOperation(value="Atualiza um Cliente")
 	public Cliente atualizaCliente(@RequestBody Cliente cliente) {
 
-		return petzRepository.save(cliente);
+		return clienteRepository.save(cliente);
+
+	}
+	
+	@GetMapping("/pets")
+	@ApiOperation(value="Retorna Lista de Pets")
+	public List<Pet> listaPets() {
+
+		return petRepository.findAll();
+
+	}
+
+	@GetMapping("/pets/{codigo}")
+	@ApiOperation(value="Retorna Pet Unico")
+	public Pet listaPetUnico(@PathVariable(value = "codigo") long codigo) {
+
+		return petRepository.findById(codigo);
+
+	}
+
+	@PostMapping("/pet")
+	@ApiOperation(value="Salva um Pet")
+	public Pet salvaPet(@RequestBody Pet pet) {
+
+		return petRepository.save(pet);
+
+	}
+	
+	@DeleteMapping("/pet")
+	@ApiOperation(value="Deleta um Pet")
+	public void deletaPet(@RequestBody Pet pet) {
+
+		petRepository.delete(pet);
+
+	}
+	
+	@PutMapping("/pet")
+	@ApiOperation(value="Atualiza um Pet")
+	public Pet atualizaPet(@RequestBody Pet pet) {
+
+		return petRepository.save(pet);
 
 	}
 	

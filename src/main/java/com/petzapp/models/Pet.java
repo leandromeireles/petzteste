@@ -14,18 +14,16 @@ public class Pet implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long codigo;
+	private long id;
 
 	private String nome;
 
-	
-
-	public long getCodigo() {
-		return codigo;
+	public long getId() {
+		return id;
 	}
 
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getNome() {

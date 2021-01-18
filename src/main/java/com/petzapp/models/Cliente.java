@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class Cliente implements Serializable {
 
@@ -15,18 +14,17 @@ public class Cliente implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long codigo;
+	private long id;
 
 	private String nome;
 	
-	private long idPet;
-
-	public long getCodigo() {
-		return codigo;
+	
+	public long getId() {
+		return id;
 	}
 
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getNome() {
@@ -35,14 +33,6 @@ public class Cliente implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public long getIdPet() {
-		return idPet;
-	}
-
-	public void setIdPet(long idPet) {
-		this.idPet = idPet;
 	}
 
 }
