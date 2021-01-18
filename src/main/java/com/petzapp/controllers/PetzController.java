@@ -40,12 +40,12 @@ public class PetzController {
 	
 	
 	
-	@RequestMapping("/clientes")
+	/*@RequestMapping("/clientes")
 	public ModelAndView listaClientes(){
 		ModelAndView mv = new ModelAndView("index");
 		Iterable<Cliente> clientes = pr.findAll();
 		mv.addObject("clientes", clientes);
 		return mv;
-	}
+	}*/
 
 }
