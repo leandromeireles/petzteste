@@ -41,11 +41,11 @@ public class PetzResource {
 
 	}
 
-	@GetMapping("/clientes/{codigo}")
+	@GetMapping("/clientes/{id}")
 	@ApiOperation(value="Retorna Clientes Unico")
-	public Cliente listaClienteUnico(@PathVariable(value = "codigo") long codigo) {
+	public Cliente listaClienteUnico(@PathVariable(value = "id") long id) {
 
-		return clienteRepository.findById(codigo);
+		return clienteRepository.findById(id);
 
 	}
 
@@ -81,11 +81,11 @@ public class PetzResource {
 
 	}
 
-	@GetMapping("/pets/{codigo}")
+	@GetMapping("/pets/{id}")
 	@ApiOperation(value="Retorna Pet Unico")
-	public Pet listaPetUnico(@PathVariable(value = "codigo") long codigo) {
+	public Pet listaPetUnico(@PathVariable(value = "id") long id) {
 
-		return petRepository.findById(codigo);
+		return petRepository.findById(id);
 
 	}
 

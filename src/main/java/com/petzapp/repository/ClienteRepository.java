@@ -6,5 +6,5 @@ import com.petzapp.models.Cliente;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 	
-	Cliente findById(long codigo);
+	Cliente findById(long id);
 }

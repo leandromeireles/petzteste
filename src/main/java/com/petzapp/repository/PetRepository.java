@@ -6,5 +6,5 @@ import com.petzapp.models.Pet;
 
 public interface PetRepository extends JpaRepository<Pet, Long> {
 	
-	Pet findById(long codigo);
+	Pet findById(long id);
 }
